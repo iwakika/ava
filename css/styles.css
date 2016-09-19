@@ -4,17 +4,45 @@
     width: 100%;
 }
 
+.top {
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.padding {
+    padding: 8px 16px;
+}
+
+.padding-0 {
+    padding: 0;
+}
+
+.blue {
+    background-color: #005FA4;
+    color: white;
+}
+
+.right {
+    float: right;
+}
+
+.btn {
+    border: none;
+    color: white;
+}
+
 .login {
-    text-align: center;
     margin: 5% 20%;
 }
 
-.titleLogin {
+.center {
     text-align: center;
+}
+
+.coolFont {
     font-family: 'Indie Flower', cursive;
     font-weight: bold;
-    /*padding-top: 10px;
-    padding-bottom: 10px;*/
 }
 
 .spaceAfter {
@@ -26,7 +54,6 @@
 }
 
 header {
-    background-color: #005FA4;
     border-bottom: 3px solid #FFCC00;
     margin-top: 0;
 }
@@ -38,61 +65,16 @@ input {
 }
 
 button {
-    box-sizing: border-box;
-    background-color: #005FA4;
-    color: #FFFFFF;
+    /*box-sizing: border-box;*/
     border: none;
     border-radius: 10px;
     padding: 10px;
     width: 250px;
     font-weight: bold;
-}
-
-footer {
-    text-align: center;
+    font: inherit;
+    margin: 0;
 }
 
 div a {
     text-decoration: none;
-}
-
-ul.topnav {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-ul.topnav li {
-    float: left;
-}
-
-ul.topnav li a {
-    display: inline-block;
-    color: #f2f2f2;
-    text-align: center;
-    font-weight: bold;
-    font-family: arial;
-    padding: 14px 16px;
-    text-decoration: none;
-    transition: 0.3s;
-    font-size: 17px;
-}
-
-ul.topnav li a:hover {
-    background-color: #075C99;
-}
-
-ul.topnav li.icon {
-    display: none;
-}
-
-@media screen and (max-width:680px) {
-    ul.topnav li:not(: first-child) {
-        display: none;
-    }
-    ul.topnav li.icon {
-        float: right;
-        display: inline-block;
-    }
 }
