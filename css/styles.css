@@ -4,8 +4,11 @@
     width: 100%;
 }
 
+.large {
+    font-size: 25px;
+}
+
 .top {
-    position: fixed;
     width: 100%;
     top: 0;
 }
@@ -62,6 +65,10 @@ input {
     padding: 7px 20px;
     width: 250px;
     box-sizing: border-box;
+}
+
+body {
+    margin: 0;
 }
 
 button {
