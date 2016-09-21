@@ -1,5 +1,4 @@
 .container {
-    width: 100%;
     padding: 0.01em 16px;
 }
 
@@ -56,10 +55,6 @@
     padding-top: 12px;
 }
 
-.material-icons.icon72 {
-    font-size: 72px;
-}
-
 .material-icons.icon46 {
     font-size: 46px;
 }
@@ -69,6 +64,11 @@
     height: 100%;
     width: 300px;
     overflow: auto;
+}
+
+.sidenav a {
+    display: block;
+    text-decoration: none;
 }
 
 .col {
@@ -88,8 +88,16 @@
     color: black;
 }
 
+.main {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    /*Eliminar as linha de cima*/
+    background-color: #999999;
+    margin-left: 300px;
+}
+
 header {
-    border-bottom: 3px solid #FFCC00;
     margin-top: 0;
 }
 
@@ -101,6 +109,8 @@ input {
 body {
     margin: 0;
     font-family: "Raleway", sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
 }
 
 button {
@@ -114,4 +124,10 @@ button {
 
 div a {
     text-decoration: none;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 20px 0;
 }
