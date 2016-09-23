@@ -38,7 +38,7 @@
             <dl>
                 <dt><a href="#" class="padding"><i class="material-icons">class</i>&nbsp; Ciência da Computação</a></dt>
                 <!--Adicionar conteudo do JSON-->
-                <div class="id01" class="paddingDisci">
+                <div id="id01" class="paddingDisci">
                 </div>
             </dl>
         </div>
@@ -62,11 +62,15 @@
 
 </body>
 <script>
+    var text = "";
     var disciplinas = ["CMP.103.0.1", "CMP.93.0.1", "SIS.82.2.1", "CMP.151.0.3"];
+    var descricao = ["Desenvolvimento para Web", "Linguagens de Programação", "Processo de Software II", "Teoria dos Grafos"];
 
     for (var i = 0; i < disciplinas.length; i++) {
-        document.getElementById("id01").innerHTML = "<p>" + disciplinas[i] + "</a>";
+        text += '<dt><a href="#" class="padding"><i class="material-icons">class</i>&nbsp; ' + disciplinas[i] + '</a></dt>';
+        text += '<dd>' + descricao[i] + '</dd>';
     }
+    document.getElementById("id01").innerHTML = text;
 </script>
 
 </html>
