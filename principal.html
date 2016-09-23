@@ -36,7 +36,7 @@
         </div>
         <div>
             <dl>
-                <dt><a href="#" class="padding"><i class="material-icons">class</i>&nbsp; Ciência da Computação</a></dt>
+                <dt class="padding"><i class="material-icons colored">class</i>&nbsp; Ciência da Computação</dt>
                 <!--Adicionar conteudo do JSON-->
                 <div id="id01" class="paddingDisci">
                 </div>
@@ -67,7 +67,7 @@
     var descricao = ["Desenvolvimento para Web", "Linguagens de Programação", "Processo de Software II", "Teoria dos Grafos"];
 
     for (var i = 0; i < disciplinas.length; i++) {
-        text += '<dt><a href="#" class="padding"><i class="material-icons">class</i>&nbsp; ' + disciplinas[i] + '</a></dt>';
+        text += '<dt><a href="#" class="padding"><i class="material-icons  colored">class</i>&nbsp; ' + disciplinas[i] + '</a></dt>';
         text += '<dd>' + descricao[i] + '</dd>';
     }
     document.getElementById("id01").innerHTML = text;
