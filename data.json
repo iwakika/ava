@@ -1,0 +1,15 @@
+{
+    "disciplinas": [{
+        "nome": "CMP.103.0.1",
+        "descricao": "Desenvolvimento para Web"
+    }, {
+        "nome": "CMP.93.0.1",
+        "descricao": "Linguagens de Programação"
+    }, {
+        "nome": "SIS.82.2.1",
+        "descricao": "Processo de Software II"
+    }, {
+        "nome": "CMP.151.0.3",
+        "descricao": "Teoria dos Grafos"
+    }]
+}

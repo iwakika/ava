@@ -34,7 +34,14 @@
         <div class="container">
             <b>Dashboard</b>
         </div>
-        <a href="#" class="padding"><i class="material-icons">class</i>&nbsp; Ciência da Computação</a>
+        <div>
+            <dl>
+                <dt><a href="#" class="padding"><i class="material-icons">class</i>&nbsp; Ciência da Computação</a></dt>
+                <!--Adicionar conteudo do JSON-->
+                <div class="id01" class="paddingDisci">
+                </div>
+            </dl>
+        </div>
         <a href="#" class="padding"><i class="material-icons">account_circle</i>&nbsp; Account</a>
         <a href="#" class="padding"><i class="material-icons">settings</i>&nbsp;  Preferências</a>
         <a href="#" class="padding"><i class="material-icons">backup</i>&nbsp; Backup</a>
@@ -54,5 +61,12 @@
     </div>
 
 </body>
+<script>
+    var disciplinas = ["CMP.103.0.1", "CMP.93.0.1", "SIS.82.2.1", "CMP.151.0.3"];
+
+    for (var i = 0; i < disciplinas.length; i++) {
+        document.getElementById("id01").innerHTML = "<p>" + disciplinas[i] + "</a>";
+    }
+</script>
 
 </html>
