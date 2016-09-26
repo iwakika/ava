@@ -72,6 +72,7 @@
     height: 100%;
     width: 300px;
     overflow: auto;
+    display: block;
 }
 
 .sidenav a {
@@ -103,6 +104,44 @@
     /*Eliminar as linha de cima*/
     background-color: #999999;
     margin-left: 300px;
+}
+
+.noticias {
+    position: relative;
+    overflow: hidden;
+    width: 285px;
+    height: 607px;
+    display: block;
+}
+
+@media screen and (max-width:992px) {
+    .sidenav.collapse {
+        display: none;
+    }
+    .main {
+        margin-left: 0!important;
+        margin-right: 0!important;
+    }
+    .noticias {
+        display: none;
+    }
+}
+
+@media screen and (min-width:993px) {
+    .sidenav.collapse {
+        display: block!important
+    }
+    .noticias {
+        display: block;
+    }
+}
+
+iframe {
+    position: absolute;
+    width: 1500px;
+    height: 2000px;
+    right: -290px;
+    top: -355px;
 }
 
 header {
