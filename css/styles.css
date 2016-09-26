@@ -78,6 +78,8 @@
 .sidenav a {
     display: block;
     text-decoration: none;
+    color: black;
+    padding: 4px 2px 4px 16px;
 }
 
 .col {
@@ -90,11 +92,6 @@
 
 .col.s8 {
     width: 66.66666%;
-}
-
-.sidenav a {
-    padding: 4px 2px 4px 16px;
-    color: black;
 }
 
 .main {
@@ -129,7 +126,7 @@
 
 @media screen and (min-width:993px) {
     .sidenav.collapse {
-        display: block!important
+        display: block;
     }
     .noticias {
         display: block;
