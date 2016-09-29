@@ -14,7 +14,7 @@
 <body>
     <!--Top Container-->
     <div class="top blue padding large">
-        <button class="btn padding-0" onclick="open();"><i class="fa fa-bars"></i> &nbsp;Menu</button>
+        <button class="btn hide-large padding-0" onclick="abrirNav();"><i class="fa fa-bars"></i> &nbsp;Menu</button>
         <span class="right coolFont">AVA</span>
     </div>
 
@@ -48,11 +48,13 @@
         <a href="#" class="padding"><i class="material-icons">feedback</i>&nbsp; Contato</a>
     </nav>
 
+    <div class="">
+
+    </div>
     <!-- !PAGE CONTENT! -->
-    <div class="main">
+    <div class="main" id="myMain">
 
         <header>
-            <h5><b>Disciplinas</b></h5>
         </header>
         <!--Diciplinas-->
 
@@ -65,26 +67,6 @@
     </div>
 
 </body>
-<script>
-    var mySidenav = document.getElementById("mySidenav");
-
-    function open() {
-        if (mySidenav.style.display === 'block') {
-            mySidenav.style.display = 'none';
-        } else {
-            mySidenav.style.display = 'block';
-        }
-    }
-
-    var text = "";
-    var disciplinas = ["CMP.103.0.1", "CMP.93.0.1", "SIS.82.2.1", "CMP.151.0.3"];
-    var descricao = ["Desenvolvimento para Web", "Linguagens de Programação", "Processo de Software II", "Teoria dos Grafos"];
-
-    for (var i = 0; i < disciplinas.length; i++) {
-        text += '<dt><a href="#" class="padding"><i class="material-icons colored">class</i>&nbsp; ' + disciplinas[i] + '</a></dt>';
-        text += '<dd>' + descricao[i] + '</dd>';
-    }
-    document.getElementById("id01").innerHTML = text;
-</script>
+<script src="js/myJavaScript.js"></script>
 
 </html>

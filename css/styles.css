@@ -100,7 +100,7 @@
     width: 100%;
     /*Eliminar as linha de cima*/
     background-color: #999999;
-    margin-left: 300px;
+    margin: 0px 300px;
 }
 
 .noticias {
@@ -132,6 +132,13 @@
         display: block;
     }
 }
+
+
+/*@media (min-width:993px) {
+    .hide-large {
+        display: none!important
+    }
+}*/
 
 iframe {
     position: absolute;
