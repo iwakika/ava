@@ -10,9 +10,11 @@ import javax.persistence.Id;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
+import javax.xml.bind.annotation.XmlRootElement;
 
 @Entity
 @Table(name = "pessoas")
+@XmlRootElement
 public class Pessoa {
 
 	@Id

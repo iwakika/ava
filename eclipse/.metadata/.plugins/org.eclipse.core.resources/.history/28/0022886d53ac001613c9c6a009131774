@@ -1,0 +1,1211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://model.furb.br" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://model.furb.br" xmlns:intf="http://model.furb.br" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://model.furb.br" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="getSenha">
+    <complexType/>
+   </element>
+   <element name="getSenhaResponse">
+    <complexType>
+     <sequence>
+      <element name="getSenhaReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setSenha">
+    <complexType>
+     <sequence>
+      <element name="senha" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setSenhaResponse">
+    <complexType/>
+   </element>
+   <element name="getSobrenome">
+    <complexType/>
+   </element>
+   <element name="getSobrenomeResponse">
+    <complexType>
+     <sequence>
+      <element name="getSobrenomeReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getNome">
+    <complexType/>
+   </element>
+   <element name="getNomeResponse">
+    <complexType>
+     <sequence>
+      <element name="getNomeReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getSkype">
+    <complexType/>
+   </element>
+   <element name="getSkypeResponse">
+    <complexType>
+     <sequence>
+      <element name="getSkypeReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setLogin">
+    <complexType>
+     <sequence>
+      <element name="login" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setLoginResponse">
+    <complexType/>
+   </element>
+   <element name="getTwitter">
+    <complexType/>
+   </element>
+   <element name="getTwitterResponse">
+    <complexType>
+     <sequence>
+      <element name="getTwitterReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getFacebook">
+    <complexType/>
+   </element>
+   <element name="getFacebookResponse">
+    <complexType>
+     <sequence>
+      <element name="getFacebookReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getIdpessoa">
+    <complexType/>
+   </element>
+   <element name="getIdpessoaResponse">
+    <complexType>
+     <sequence>
+      <element name="getIdpessoaReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setSobrenome">
+    <complexType>
+     <sequence>
+      <element name="sobrenome" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setSobrenomeResponse">
+    <complexType/>
+   </element>
+   <element name="setSkype">
+    <complexType>
+     <sequence>
+      <element name="skype" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setSkypeResponse">
+    <complexType/>
+   </element>
+   <element name="getHomepage">
+    <complexType/>
+   </element>
+   <element name="getHomepageResponse">
+    <complexType>
+     <sequence>
+      <element name="getHomepageReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setNome">
+    <complexType>
+     <sequence>
+      <element name="nome" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setNomeResponse">
+    <complexType/>
+   </element>
+   <element name="setTwitter">
+    <complexType>
+     <sequence>
+      <element name="twitter" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setTwitterResponse">
+    <complexType/>
+   </element>
+   <element name="setFacebook">
+    <complexType>
+     <sequence>
+      <element name="facebook" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setFacebookResponse">
+    <complexType/>
+   </element>
+   <element name="getLogin">
+    <complexType/>
+   </element>
+   <element name="getLoginResponse">
+    <complexType>
+     <sequence>
+      <element name="getLoginReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setHomepage">
+    <complexType>
+     <sequence>
+      <element name="homepage" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setHomepageResponse">
+    <complexType/>
+   </element>
+   <element name="setDisciplinas">
+    <complexType>
+     <sequence>
+      <element name="disciplinas" type="impl:ArrayOf_xsd_anyType"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="ArrayOf_xsd_anyType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="xsd:anyType"/>
+    </sequence>
+   </complexType>
+   <element name="setDisciplinasResponse">
+    <complexType/>
+   </element>
+   <element name="getDisciplinas">
+    <complexType/>
+   </element>
+   <element name="getDisciplinasResponse">
+    <complexType>
+     <sequence>
+      <element name="getDisciplinasReturn" type="impl:ArrayOf_xsd_anyType"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setEmail">
+    <complexType>
+     <sequence>
+      <element name="email" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setEmailResponse">
+    <complexType/>
+   </element>
+   <element name="getEmail">
+    <complexType/>
+   </element>
+   <element name="getEmailResponse">
+    <complexType>
+     <sequence>
+      <element name="getEmailReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="setSkypeRequest">
+
+      <wsdl:part element="impl:setSkype" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getFacebookRequest">
+
+      <wsdl:part element="impl:getFacebook" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setEmailResponse">
+
+      <wsdl:part element="impl:setEmailResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setSenhaResponse">
+
+      <wsdl:part element="impl:setSenhaResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getSobrenomeResponse">
+
+      <wsdl:part element="impl:getSobrenomeResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getNomeResponse">
+
+      <wsdl:part element="impl:getNomeResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getNomeRequest">
+
+      <wsdl:part element="impl:getNome" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setNomeRequest">
+
+      <wsdl:part element="impl:setNome" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getDisciplinasResponse">
+
+      <wsdl:part element="impl:getDisciplinasResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getSenhaResponse">
+
+      <wsdl:part element="impl:getSenhaResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setSobrenomeRequest">
+
+      <wsdl:part element="impl:setSobrenome" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setNomeResponse">
+
+      <wsdl:part element="impl:setNomeResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getEmailResponse">
+
+      <wsdl:part element="impl:getEmailResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setLoginResponse">
+
+      <wsdl:part element="impl:setLoginResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setSkypeResponse">
+
+      <wsdl:part element="impl:setSkypeResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getLoginRequest">
+
+      <wsdl:part element="impl:getLogin" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getDisciplinasRequest">
+
+      <wsdl:part element="impl:getDisciplinas" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getSobrenomeRequest">
+
+      <wsdl:part element="impl:getSobrenome" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getIdpessoaResponse">
+
+      <wsdl:part element="impl:getIdpessoaResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getFacebookResponse">
+
+      <wsdl:part element="impl:getFacebookResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getHomepageResponse">
+
+      <wsdl:part element="impl:getHomepageResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getSenhaRequest">
+
+      <wsdl:part element="impl:getSenha" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getLoginResponse">
+
+      <wsdl:part element="impl:getLoginResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getEmailRequest">
+
+      <wsdl:part element="impl:getEmail" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getIdpessoaRequest">
+
+      <wsdl:part element="impl:getIdpessoa" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setTwitterRequest">
+
+      <wsdl:part element="impl:setTwitter" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getTwitterResponse">
+
+      <wsdl:part element="impl:getTwitterResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getSkypeRequest">
+
+      <wsdl:part element="impl:getSkype" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setLoginRequest">
+
+      <wsdl:part element="impl:setLogin" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setFacebookResponse">
+
+      <wsdl:part element="impl:setFacebookResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getHomepageRequest">
+
+      <wsdl:part element="impl:getHomepage" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setSobrenomeResponse">
+
+      <wsdl:part element="impl:setSobrenomeResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setHomepageRequest">
+
+      <wsdl:part element="impl:setHomepage" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setDisciplinasRequest">
+
+      <wsdl:part element="impl:setDisciplinas" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setTwitterResponse">
+
+      <wsdl:part element="impl:setTwitterResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setEmailRequest">
+
+      <wsdl:part element="impl:setEmail" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setHomepageResponse">
+
+      <wsdl:part element="impl:setHomepageResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getSkypeResponse">
+
+      <wsdl:part element="impl:getSkypeResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setSenhaRequest">
+
+      <wsdl:part element="impl:setSenha" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setDisciplinasResponse">
+
+      <wsdl:part element="impl:setDisciplinasResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setFacebookRequest">
+
+      <wsdl:part element="impl:setFacebook" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getTwitterRequest">
+
+      <wsdl:part element="impl:getTwitter" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="Pessoa">
+
+      <wsdl:operation name="getSenha">
+
+         <wsdl:input message="impl:getSenhaRequest" name="getSenhaRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getSenhaResponse" name="getSenhaResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setSenha">
+
+         <wsdl:input message="impl:setSenhaRequest" name="setSenhaRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setSenhaResponse" name="setSenhaResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getSobrenome">
+
+         <wsdl:input message="impl:getSobrenomeRequest" name="getSobrenomeRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getSobrenomeResponse" name="getSobrenomeResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getNome">
+
+         <wsdl:input message="impl:getNomeRequest" name="getNomeRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getNomeResponse" name="getNomeResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getSkype">
+
+         <wsdl:input message="impl:getSkypeRequest" name="getSkypeRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getSkypeResponse" name="getSkypeResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setLogin">
+
+         <wsdl:input message="impl:setLoginRequest" name="setLoginRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setLoginResponse" name="setLoginResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getTwitter">
+
+         <wsdl:input message="impl:getTwitterRequest" name="getTwitterRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getTwitterResponse" name="getTwitterResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getFacebook">
+
+         <wsdl:input message="impl:getFacebookRequest" name="getFacebookRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getFacebookResponse" name="getFacebookResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getIdpessoa">
+
+         <wsdl:input message="impl:getIdpessoaRequest" name="getIdpessoaRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getIdpessoaResponse" name="getIdpessoaResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setSobrenome">
+
+         <wsdl:input message="impl:setSobrenomeRequest" name="setSobrenomeRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setSobrenomeResponse" name="setSobrenomeResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setSkype">
+
+         <wsdl:input message="impl:setSkypeRequest" name="setSkypeRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setSkypeResponse" name="setSkypeResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getHomepage">
+
+         <wsdl:input message="impl:getHomepageRequest" name="getHomepageRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getHomepageResponse" name="getHomepageResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setNome">
+
+         <wsdl:input message="impl:setNomeRequest" name="setNomeRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setNomeResponse" name="setNomeResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setTwitter">
+
+         <wsdl:input message="impl:setTwitterRequest" name="setTwitterRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setTwitterResponse" name="setTwitterResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setFacebook">
+
+         <wsdl:input message="impl:setFacebookRequest" name="setFacebookRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setFacebookResponse" name="setFacebookResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getLogin">
+
+         <wsdl:input message="impl:getLoginRequest" name="getLoginRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getLoginResponse" name="getLoginResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setHomepage">
+
+         <wsdl:input message="impl:setHomepageRequest" name="setHomepageRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setHomepageResponse" name="setHomepageResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setDisciplinas">
+
+         <wsdl:input message="impl:setDisciplinasRequest" name="setDisciplinasRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setDisciplinasResponse" name="setDisciplinasResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getDisciplinas">
+
+         <wsdl:input message="impl:getDisciplinasRequest" name="getDisciplinasRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getDisciplinasResponse" name="getDisciplinasResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setEmail">
+
+         <wsdl:input message="impl:setEmailRequest" name="setEmailRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setEmailResponse" name="setEmailResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getEmail">
+
+         <wsdl:input message="impl:getEmailRequest" name="getEmailRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getEmailResponse" name="getEmailResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="PessoaSoapBinding" type="impl:Pessoa">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="getSenha">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getSenhaRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getSenhaResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setSenha">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setSenhaRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setSenhaResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getSobrenome">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getSobrenomeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getSobrenomeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getNome">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getNomeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getNomeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getSkype">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getSkypeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getSkypeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setLogin">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setLoginRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setLoginResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getTwitter">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getTwitterRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getTwitterResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getFacebook">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getFacebookRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getFacebookResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getIdpessoa">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getIdpessoaRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getIdpessoaResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setSobrenome">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setSobrenomeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setSobrenomeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setSkype">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setSkypeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setSkypeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getHomepage">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getHomepageRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getHomepageResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setNome">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setNomeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setNomeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setTwitter">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setTwitterRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setTwitterResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setFacebook">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setFacebookRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setFacebookResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getLogin">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getLoginRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getLoginResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setHomepage">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setHomepageRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setHomepageResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setDisciplinas">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setDisciplinasRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setDisciplinasResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getDisciplinas">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getDisciplinasRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getDisciplinasResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setEmail">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setEmailRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setEmailResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getEmail">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getEmailRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getEmailResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="PessoaService">
+
+      <wsdl:port binding="impl:PessoaSoapBinding" name="Pessoa">
+
+         <wsdlsoap:address location="http://localhost:8080/AVA_SERVER/services/Pessoa"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

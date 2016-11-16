@@ -10,11 +10,19 @@
       <parameter name="className" value="br.furb.model.Pessoa"/>
       <parameter name="wsdlPortType" value="Pessoa"/>
       <parameter name="typeMappingVersion" value="1.2"/>
-      <operation xmlns:operNS="http://model.furb.br" xmlns:retNS="http://model.furb.br" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getNome" qname="operNS:getNome" returnQName="retNS:getNomeReturn" returnType="rtns:string" soapAction="">
+      <operation xmlns:operNS="http://model.furb.br" xmlns:retNS="http://model.furb.br" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getSenha" qname="operNS:getSenha" returnQName="retNS:getSenhaReturn" returnType="rtns:string" soapAction="">
+      </operation>
+      <operation xmlns:operNS="http://model.furb.br" name="setSenha" qname="operNS:setSenha" soapAction="">
+        <parameter xmlns:pns="http://model.furb.br" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:senha" type="tns:string"/>
       </operation>
       <operation xmlns:operNS="http://model.furb.br" xmlns:retNS="http://model.furb.br" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getSobrenome" qname="operNS:getSobrenome" returnQName="retNS:getSobrenomeReturn" returnType="rtns:string" soapAction="">
       </operation>
+      <operation xmlns:operNS="http://model.furb.br" xmlns:retNS="http://model.furb.br" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getNome" qname="operNS:getNome" returnQName="retNS:getNomeReturn" returnType="rtns:string" soapAction="">
+      </operation>
       <operation xmlns:operNS="http://model.furb.br" xmlns:retNS="http://model.furb.br" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getSkype" qname="operNS:getSkype" returnQName="retNS:getSkypeReturn" returnType="rtns:string" soapAction="">
+      </operation>
+      <operation xmlns:operNS="http://model.furb.br" name="setLogin" qname="operNS:setLogin" soapAction="">
+        <parameter xmlns:pns="http://model.furb.br" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:login" type="tns:string"/>
       </operation>
       <operation xmlns:operNS="http://model.furb.br" xmlns:retNS="http://model.furb.br" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getTwitter" qname="operNS:getTwitter" returnQName="retNS:getTwitterReturn" returnType="rtns:string" soapAction="">
       </operation>
@@ -22,16 +30,16 @@
       </operation>
       <operation xmlns:operNS="http://model.furb.br" xmlns:retNS="http://model.furb.br" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getIdpessoa" qname="operNS:getIdpessoa" returnQName="retNS:getIdpessoaReturn" returnType="rtns:int" soapAction="">
       </operation>
-      <operation xmlns:operNS="http://model.furb.br" xmlns:retNS="http://model.furb.br" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getHomepage" qname="operNS:getHomepage" returnQName="retNS:getHomepageReturn" returnType="rtns:string" soapAction="">
-      </operation>
-      <operation xmlns:operNS="http://model.furb.br" name="setNome" qname="operNS:setNome" soapAction="">
-        <parameter xmlns:pns="http://model.furb.br" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:nome" type="tns:string"/>
-      </operation>
       <operation xmlns:operNS="http://model.furb.br" name="setSobrenome" qname="operNS:setSobrenome" soapAction="">
         <parameter xmlns:pns="http://model.furb.br" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:sobrenome" type="tns:string"/>
       </operation>
       <operation xmlns:operNS="http://model.furb.br" name="setSkype" qname="operNS:setSkype" soapAction="">
         <parameter xmlns:pns="http://model.furb.br" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:skype" type="tns:string"/>
+      </operation>
+      <operation xmlns:operNS="http://model.furb.br" xmlns:retNS="http://model.furb.br" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getHomepage" qname="operNS:getHomepage" returnQName="retNS:getHomepageReturn" returnType="rtns:string" soapAction="">
+      </operation>
+      <operation xmlns:operNS="http://model.furb.br" name="setNome" qname="operNS:setNome" soapAction="">
+        <parameter xmlns:pns="http://model.furb.br" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:nome" type="tns:string"/>
       </operation>
       <operation xmlns:operNS="http://model.furb.br" name="setTwitter" qname="operNS:setTwitter" soapAction="">
         <parameter xmlns:pns="http://model.furb.br" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:twitter" type="tns:string"/>
@@ -39,30 +47,22 @@
       <operation xmlns:operNS="http://model.furb.br" name="setFacebook" qname="operNS:setFacebook" soapAction="">
         <parameter xmlns:pns="http://model.furb.br" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:facebook" type="tns:string"/>
       </operation>
+      <operation xmlns:operNS="http://model.furb.br" xmlns:retNS="http://model.furb.br" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getLogin" qname="operNS:getLogin" returnQName="retNS:getLoginReturn" returnType="rtns:string" soapAction="">
+      </operation>
       <operation xmlns:operNS="http://model.furb.br" name="setHomepage" qname="operNS:setHomepage" soapAction="">
         <parameter xmlns:pns="http://model.furb.br" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:homepage" type="tns:string"/>
-      </operation>
-      <operation xmlns:operNS="http://model.furb.br" xmlns:retNS="http://model.furb.br" xmlns:rtns="http://model.furb.br" xmlns:tns="http://model.furb.br" name="getDisciplinas" qname="operNS:getDisciplinas" returnQName="retNS:getDisciplinasReturn" returnType="rtns:ArrayOf_xsd_anyType" returnItemQName="tns:item" soapAction="">
       </operation>
       <operation xmlns:operNS="http://model.furb.br" name="setDisciplinas" qname="operNS:setDisciplinas" soapAction="">
         <parameter xmlns:pns="http://model.furb.br" xmlns:tns="http://model.furb.br" xmlns:itns="http://model.furb.br" qname="pns:disciplinas" type="tns:ArrayOf_xsd_anyType" itemQName="itns:item"/>
       </operation>
-      <operation xmlns:operNS="http://model.furb.br" xmlns:retNS="http://model.furb.br" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getSenha" qname="operNS:getSenha" returnQName="retNS:getSenhaReturn" returnType="rtns:string" soapAction="">
+      <operation xmlns:operNS="http://model.furb.br" xmlns:retNS="http://model.furb.br" xmlns:rtns="http://model.furb.br" xmlns:tns="http://model.furb.br" name="getDisciplinas" qname="operNS:getDisciplinas" returnQName="retNS:getDisciplinasReturn" returnType="rtns:ArrayOf_xsd_anyType" returnItemQName="tns:item" soapAction="">
       </operation>
       <operation xmlns:operNS="http://model.furb.br" name="setEmail" qname="operNS:setEmail" soapAction="">
         <parameter xmlns:pns="http://model.furb.br" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:email" type="tns:string"/>
       </operation>
       <operation xmlns:operNS="http://model.furb.br" xmlns:retNS="http://model.furb.br" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getEmail" qname="operNS:getEmail" returnQName="retNS:getEmailReturn" returnType="rtns:string" soapAction="">
       </operation>
-      <operation xmlns:operNS="http://model.furb.br" name="setLogin" qname="operNS:setLogin" soapAction="">
-        <parameter xmlns:pns="http://model.furb.br" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:login" type="tns:string"/>
-      </operation>
-      <operation xmlns:operNS="http://model.furb.br" xmlns:retNS="http://model.furb.br" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getLogin" qname="operNS:getLogin" returnQName="retNS:getLoginReturn" returnType="rtns:string" soapAction="">
-      </operation>
-      <operation xmlns:operNS="http://model.furb.br" name="setSenha" qname="operNS:setSenha" soapAction="">
-        <parameter xmlns:pns="http://model.furb.br" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:senha" type="tns:string"/>
-      </operation>
-      <parameter name="allowedMethods" value="getSkype setSkype getSobrenome getFacebook getHomepage getNome getIdpessoa getLogin setTwitter getTwitter setHomepage setEmail setNome setDisciplinas setLogin getEmail setFacebook setSenha getSenha setSobrenome getDisciplinas"/>
+      <parameter name="allowedMethods" value="getSkype setSkype getSobrenome getFacebook getHomepage getNome getIdpessoa getLogin setTwitter getTwitter setHomepage setEmail setLogin setNome setDisciplinas getEmail setSenha setFacebook getSenha setSobrenome getDisciplinas"/>
 
       <typeMapping xmlns:ns="http://model.furb.br" qname="ns:&gt;getDisciplinas" type="java:br.furb.model.GetDisciplinas" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
       <typeMapping xmlns:ns="http://model.furb.br" qname="ns:&gt;getFacebook" type="java:br.furb.model.GetFacebook" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
@@ -78,10 +78,10 @@
       <typeMapping xmlns:ns="http://model.furb.br" qname="ns:&gt;getSobrenome" type="java:br.furb.model.GetSobrenome" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
       <typeMapping xmlns:ns="http://model.furb.br" qname="ns:&gt;getSobrenomeResponse" type="java:br.furb.model.GetSobrenomeResponse" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
       <arrayMapping xmlns:ns="http://model.furb.br" xmlns:cmp-ns="http://www.w3.org/2001/XMLSchema" qname="ns:ArrayOf_xsd_anyType" type="java:java.lang.Object[]" innerType="cmp-ns:anyType" encodingStyle=""/>
+      <typeMapping xmlns:ns="http://model.furb.br" qname="ns:&gt;getSenha" type="java:br.furb.model.GetSenha" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
       <typeMapping xmlns:ns="http://model.furb.br" qname="ns:&gt;getNomeResponse" type="java:br.furb.model.GetNomeResponse" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
       <typeMapping xmlns:ns="http://model.furb.br" qname="ns:&gt;getSkype" type="java:br.furb.model.GetSkype" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
       <typeMapping xmlns:ns="http://model.furb.br" qname="ns:&gt;getTwitter" type="java:br.furb.model.GetTwitter" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
-      <typeMapping xmlns:ns="http://model.furb.br" qname="ns:&gt;getSenha" type="java:br.furb.model.GetSenha" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
       <typeMapping xmlns:ns="http://model.furb.br" qname="ns:&gt;getLogin" type="java:br.furb.model.GetLogin" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
       <typeMapping xmlns:ns="http://model.furb.br" qname="ns:&gt;setEmailResponse" type="java:br.furb.model.SetEmailResponse" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
       <typeMapping xmlns:ns="http://model.furb.br" qname="ns:&gt;getNome" type="java:br.furb.model.GetNome" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
@@ -91,9 +91,9 @@
       <typeMapping xmlns:ns="http://model.furb.br" qname="ns:&gt;setHomepageResponse" type="java:br.furb.model.SetHomepageResponse" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
       <typeMapping xmlns:ns="http://model.furb.br" qname="ns:&gt;getEmail" type="java:br.furb.model.GetEmail" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
       <typeMapping xmlns:ns="http://model.furb.br" qname="ns:&gt;setSkype" type="java:br.furb.model.SetSkype" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
+      <typeMapping xmlns:ns="http://model.furb.br" qname="ns:&gt;setSenhaResponse" type="java:br.furb.model.SetSenhaResponse" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
       <typeMapping xmlns:ns="http://model.furb.br" qname="ns:&gt;getHomepage" type="java:br.furb.model.GetHomepage" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
       <typeMapping xmlns:ns="http://model.furb.br" qname="ns:&gt;setDisciplinas" type="java:br.furb.model.SetDisciplinas" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
-      <typeMapping xmlns:ns="http://model.furb.br" qname="ns:&gt;setSenhaResponse" type="java:br.furb.model.SetSenhaResponse" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
       <typeMapping xmlns:ns="http://model.furb.br" qname="ns:&gt;getSkypeResponse" type="java:br.furb.model.GetSkypeResponse" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
       <typeMapping xmlns:ns="http://model.furb.br" qname="ns:&gt;setSenha" type="java:br.furb.model.SetSenha" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
       <typeMapping xmlns:ns="http://model.furb.br" qname="ns:&gt;getTwitterResponse" type="java:br.furb.model.GetTwitterResponse" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
@@ -102,10 +102,10 @@
       <typeMapping xmlns:ns="http://model.furb.br" qname="ns:&gt;getEmailResponse" type="java:br.furb.model.GetEmailResponse" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
       <typeMapping xmlns:ns="http://model.furb.br" qname="ns:&gt;setNome" type="java:br.furb.model.SetNome" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
       <typeMapping xmlns:ns="http://model.furb.br" qname="ns:&gt;setFacebookResponse" type="java:br.furb.model.SetFacebookResponse" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
-      <typeMapping xmlns:ns="http://model.furb.br" qname="ns:&gt;setSobrenome" type="java:br.furb.model.SetSobrenome" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
       <typeMapping xmlns:ns="http://model.furb.br" qname="ns:&gt;setLoginResponse" type="java:br.furb.model.SetLoginResponse" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
+      <typeMapping xmlns:ns="http://model.furb.br" qname="ns:&gt;setSobrenome" type="java:br.furb.model.SetSobrenome" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
       <typeMapping xmlns:ns="http://model.furb.br" qname="ns:&gt;setSobrenomeResponse" type="java:br.furb.model.SetSobrenomeResponse" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
-      <typeMapping xmlns:ns="http://model.furb.br" qname="ns:&gt;setDisciplinasResponse" type="java:br.furb.model.SetDisciplinasResponse" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
       <typeMapping xmlns:ns="http://model.furb.br" qname="ns:&gt;setLogin" type="java:br.furb.model.SetLogin" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
+      <typeMapping xmlns:ns="http://model.furb.br" qname="ns:&gt;setDisciplinasResponse" type="java:br.furb.model.SetDisciplinasResponse" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
   </service>
 </deployment>
