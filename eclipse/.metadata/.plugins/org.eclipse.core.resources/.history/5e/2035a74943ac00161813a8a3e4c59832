@@ -1,0 +1,49 @@
+package br.furb.view;
+
+import java.util.List;
+
+import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
+import javax.ws.rs.PUT;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+
+import br.furb.control.DisciplinaControl;
+import br.furb.control.PessoaControl;
+import br.furb.model.Disciplina;
+import br.furb.model.Pessoa;
+
+//@Path("pessoas")
+@Path("api")
+public class PessoasService {
+
+	PessoaControl pessoaControl = new PessoaControl();
+	DisciplinaControl disciplinaControl = new DisciplinaControl();
+
+	/*@GET
+	@Produces({ "application/json" })
+	public List<Disciplina> getDisciplinas() {
+		return disciplinaControl.listarTodos();
+	}
+
+	@Path("{id}")
+	@GET
+	@Produces("application/json")
+	public Pessoa getPessoa(@PathParam("id") int id) {
+		return pessoaControl.buscar(id);
+	}*/
+
+	@Path("{id}")
+	@PUT
+	@Consumes("application/json")
+	@Produces("text/plain")
+	public String setDadosPessoa(Pessoa p, @PathParam("id") int id) {
+
+		if (pessoaControl.alterarDados(id, p.getEmail(), p.getFacebook(), p.getHomepage(), p.getSkype(),
+				p.getTwitter()))
+			return p.getNome() + " atualizada com sucesso.";
+
+		return "Nao foi possível atualizar " + p.getNome() + ".";
+	}
+}

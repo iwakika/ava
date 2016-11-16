@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.sun.net.httpserver.HttpHandler"/>
+<fullyQualifiedTypeName name="java.net.InetSocketAddress"/>
+<fullyQualifiedTypeName name="com.sun.net.httpserver.HttpExchange"/>
+<fullyQualifiedTypeName name="java.io.OutputStream"/>
+<fullyQualifiedTypeName name="com.sun.jersey.api.core.PackagesResourceConfig"/>
+<fullyQualifiedTypeName name="com.sun.jersey.api.container.httpserver.HttpServerFactory"/>
+<fullyQualifiedTypeName name="javax.ws.rs.core.UriBuilder"/>
+<fullyQualifiedTypeName name="java.net.UnknownHostException"/>
+<fullyQualifiedTypeName name="java.net.InetAddress"/>
+<fullyQualifiedTypeName name="javax.ws.rs.core.MediaType"/>
+<fullyQualifiedTypeName name="br.furb.control.PessoaControl"/>
+<fullyQualifiedTypeName name="br.furb.control.DisciplinaControl"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="br.furb.model.Disciplina"/>
+<fullyQualifiedTypeName name="br.furb.model.Pessoa"/>
+<fullyQualifiedTypeName name="javax.ws.rs.PathParam"/>
+<fullyQualifiedTypeName name="javax.ws.rs.PUT"/>
+<fullyQualifiedTypeName name="javax.ws.rs.Consumes"/>
+</qualifiedTypeNameHistroy>

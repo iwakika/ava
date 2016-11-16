@@ -1,30 +1,44 @@
 package br.furb.principal;
 
+import java.io.IOException;
+import java.net.InetAddress;
 import java.net.URI;
+import java.net.UnknownHostException;
 
-import org.glassfish.jersey.server.ResourceConfig;
+import javax.ws.rs.core.UriBuilder;
 
+import com.sun.jersey.api.container.httpserver.HttpServerFactory;
+import com.sun.jersey.api.core.PackagesResourceConfig;
 import com.sun.net.httpserver.HttpServer;
-import com.sun.security.sasl.ServerFactoryImpl;
 
 public class Servidor {
 
-	public static void main(String[] args) {
-		HttpServer server = inicializaServidor();
-		System.out.println("Servidor rodando.");
-		System.in.read();
-		server.stop();
-	}
-
-	private static HttpServer inicializaServidor() {
-		URI uri = URI.create("http://localhost:8080");
-		ResourceConfig config = new ResourceConfig();
-		ServerFactoryImpl imp = new ServerFactoryImpl();
-		imp.
-//		config.register(new CORSFilter());
-//		config.packages("servicos");
-//		HttpServer server = GrizzlyHttpServerFactory.createHttpServer(uri, config);
-		return server;
-	}
-
+	public static void main(String[] args) throws IOException {
+        System.out.println("Starting Crunchify's Embedded Jersey HTTPServer...\n");
+        HttpServer crunchifyHTTPServer = createHttpServer();
+        crunchifyHTTPServer.start();
+        System.out.println(String.format("\nJersey Application Server started with WADL available at " + "%sapplication.wadl\n", getCrunchifyURI()));
+        System.out.println("Started Crunchify's Embedded Jersey HTTPServer Successfully !!!");
+    }
+ 	
+        private static HttpServer createHttpServer() throws IOException {
+        PackagesResourceConfig crunchifyResourceConfig = new PackagesResourceConfig("br.furb.view");
+        // This tutorial required and then enable below line: http://crunchify.me/1VIwInK
+        //crunchifyResourceConfig.getContainerResponseFilters().add(CrunchifyCORSFilter.class);
+        return HttpServerFactory.create(getCrunchifyURI(), crunchifyResourceConfig);
+    }
+ 
+    private static URI getCrunchifyURI() {
+        return UriBuilder.fromUri("http://" + crunchifyGetHostName() + "/").port(8085).build();
+    }
+ 
+    private static String crunchifyGetHostName() {
+        String hostName = "localhost";
+        try {
+            hostName = InetAddress.getLocalHost().getCanonicalHostName();
+        } catch (UnknownHostException e) {
+            e.printStackTrace();
+        }
+        return hostName;
+    }
 }

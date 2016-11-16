@@ -1,0 +1,63 @@
+package br.furb.principal;
+
+import java.io.IOException;
+import java.io.OutputStream;
+import java.net.InetSocketAddress;
+import java.net.URI;
+
+import org.glassfish.jersey.server.ResourceConfig;
+
+import com.sun.net.httpserver.HttpExchange;
+import com.sun.net.httpserver.HttpHandler;
+import com.sun.net.httpserver.HttpServer;
+import com.sun.security.sasl.ServerFactoryImpl;
+
+public class Servidor {
+
+	public static void main(String[] args) {
+		HttpServer server = inicializaServidor();
+		System.out.println("Servidor rodando.");
+		try {
+			
+			int i = System.in.read();
+			while (i != 0)
+				i = System.in.read();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		server.stop(0);
+	}
+
+	private static HttpServer inicializaServidor() {
+		URI uri = URI.create("http://localhost:8080");
+		ResourceConfig config = new ResourceConfig();
+		ServerFactoryImpl imp = new ServerFactoryImpl();
+		config.register(new CORSFilter());
+		config.packages("servicos");
+		HttpServer server = ServerFactoryImpl.cr.createHttpServer(uri, config);
+		return new Htt;
+	}
+	
+	 private static HttpServer createHttpServer() throws IOException {
+	        ResourceConfig crunchifyResourceConfig = new PackagesResourceConfig("com.crunchify.tutorial");
+	        // This tutorial required and then enable below line: http://crunchify.me/1VIwInK
+	        //crunchifyResourceConfig.getContainerResponseFilters().add(CrunchifyCORSFilter.class);
+	        return HttpServerFactory.create(getCrunchifyURI(), crunchifyResourceConfig);
+	    }
+	 
+	    private static URI getCrunchifyURI() {
+	        return UriBuilder.fromUri("http://" + crunchifyGetHostName() + "/").port(8085).build();
+	    }
+	 
+	    private static String crunchifyGetHostName() {
+	        String hostName = "localhost";
+	        try {
+	            hostName = InetAddress.getLocalHost().getCanonicalHostName();
+	        } catch (UnknownHostException e) {
+	            e.printStackTrace();
+	        }
+	        return hostName;
+	    }
+
+}

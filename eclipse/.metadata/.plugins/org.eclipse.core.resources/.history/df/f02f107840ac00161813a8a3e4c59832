@@ -1,0 +1,62 @@
+package br.furb.principal;
+
+import java.io.IOException;
+import java.io.OutputStream;
+import java.net.InetSocketAddress;
+import java.net.URI;
+
+import org.glassfish.jersey.server.ResourceConfig;
+
+import com.sun.net.httpserver.HttpExchange;
+import com.sun.net.httpserver.HttpHandler;
+import com.sun.net.httpserver.HttpServer;
+import com.sun.security.sasl.ServerFactoryImpl;
+
+public class Servidor {
+
+	/*public static void main(String[] args) {
+		HttpServer server = inicializaServidor();
+		System.out.println("Servidor rodando.");
+		try {
+			
+			int i = System.in.read();
+			while (i != 0)
+				i = System.in.read();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		server.stop(0);
+	}
+
+	private static HttpServer inicializaServidor() {
+		URI uri = URI.create("http://localhost:8080");
+		ResourceConfig config = new ResourceConfig();
+		ServerFactoryImpl imp = new ServerFactoryImpl();
+		imp.
+		config.register(new CORSFilter());
+		config.packages("servicos");
+		HttpServer server = GrizzlyHttpServerFactory.createHttpServer(uri, config);
+		return new Htt;
+	}*/
+	
+	 public static void main(String[] args) throws Exception {
+	        HttpServer server = HttpServer.create(new InetSocketAddress(8000), 0);
+	        server.
+	        server.createContext("/principal", new MyHandler());
+	        server.setExecutor(null); // creates a default executor
+	        server.start();
+	    }
+
+	    static class MyHandler implements HttpHandler {
+	        @Override
+	        public void handle(HttpExchange t) throws IOException {
+	            String response = "This is the response";
+	            t.sendResponseHeaders(200, response.length());
+	            OutputStream os = t.getResponseBody();
+	            os.write(response.getBytes());
+	            os.close();
+	        }
+	    }
+
+}
