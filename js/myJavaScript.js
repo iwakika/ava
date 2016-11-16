@@ -11,6 +11,18 @@ function abrirNav() {
     }
 }
 
+function validaForm() {
+    var user = document.forms["myForm"]["usuario"].value;
+
+    if (user == "" | user == null) {
+        alert("Usuario deve ser preenchido")
+    }
+}
+
+function myTransformation(x) {
+    x.classList.toggle("change");
+}
+
 var text = "";
 var disciplinas = ["CMP.103.0.1", "CMP.93.0.1", "SIS.82.2.1", "CMP.151.0.3"];
 var descricao = ["Desenvolvimento para Web", "Linguagens de Programação", "Processo de Software II", "Teoria dos Grafos"];

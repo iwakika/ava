@@ -28,17 +28,14 @@
         </div>
 
         <div>
-            <form>
+            <form name="myForm" method="post" action="Login">
                 <input class="loginWidth" type="text" name="usuario" placeholder="Usuário">
                 <p></p>
                 <input class="loginWidth" type="password" name="senha" placeholder="Senha">
-            </form>
-        </div>
+                <p></p>
+                <button class="blue loginWidth " type="submit" name="entrar" onclick="validaForm();">Entrar</button>
 
-        <div class="spaceAfter">
-            <a href="principal.html">
-                <button class="blue loginWidth" type="button" name="entrar">Entrar</button>
-            </a>
+            </form>
         </div>
 
         <div class="spaceAfter">
@@ -54,5 +51,6 @@
     </footer>
 
 </body>
+<script src="js/myJavaScript.js"></script>
 
 </html>

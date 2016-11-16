@@ -1,0 +1,84 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from PessoaControlService WSDL service -->
+
+  <service name="PessoaControl" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://control.furb.br"/>
+      <parameter name="wsdlServiceElement" value="PessoaControlService"/>
+      <parameter name="schemaQualified" value="http://xml.apache.org/xml-soap,http://control.furb.br,http://model.furb.br"/>
+      <parameter name="wsdlServicePort" value="PessoaControl"/>
+      <parameter name="className" value="br.furb.control.PessoaControlSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="PessoaControl"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="alterarDados" qname="operNS:alterarDados" xmlns:operNS="http://control.furb.br" returnQName="retNS:alterarDadosReturn" xmlns:retNS="http://control.furb.br" returnType="rtns:boolean" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:id" xmlns:pns="http://control.furb.br" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:email" xmlns:pns="http://control.furb.br" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:facebook" xmlns:pns="http://control.furb.br" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:homepage" xmlns:pns="http://control.furb.br" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:skype" xmlns:pns="http://control.furb.br" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:twitter" xmlns:pns="http://control.furb.br" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="buscarLogin" qname="operNS:buscarLogin" xmlns:operNS="http://control.furb.br" returnQName="retNS:buscarLoginReturn" xmlns:retNS="http://control.furb.br" returnType="rtns:Pessoa" xmlns:rtns="http://model.furb.br" soapAction="" >
+        <parameter qname="pns:login" xmlns:pns="http://control.furb.br" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <parameter name="allowedMethods" value="buscarLogin alterarDados"/>
+
+      <typeMapping
+        xmlns:ns="http://model.furb.br"
+        qname="ns:Pessoa"
+        type="java:br.furb.model.Pessoa"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://control.furb.br"
+        qname="ns:>buscarLogin"
+        type="java:br.furb.control.BuscarLogin"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <arrayMapping
+        xmlns:ns="http://control.furb.br"
+        qname="ns:ArrayOf_xsd_anyType"
+        type="java:java.lang.Object[]"
+        innerType="cmp-ns:anyType" xmlns:cmp-ns="http://www.w3.org/2001/XMLSchema"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://control.furb.br"
+        qname="ns:>alterarDados"
+        type="java:br.furb.control.AlterarDados"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://control.furb.br"
+        qname="ns:>alterarDadosResponse"
+        type="java:br.furb.control.AlterarDadosResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://control.furb.br"
+        qname="ns:>buscarLoginResponse"
+        type="java:br.furb.control.BuscarLoginResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+  </service>
+</deployment>

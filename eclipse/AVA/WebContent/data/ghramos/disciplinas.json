@@ -1,0 +1,8 @@
+{
+    "disciplinas": [
+    {"nome": "CMP.103.0.1","descricao": "Desenvolvimento para Web","professor":"Luciana"},
+    {"nome": "CMP.93.0.1","descricao": "Linguagens de Programação","professor":"Luciana"},
+    {"nome": "SIS.82.2.1","descricao": "Processo de Software II","professor":"Mauro"},
+    {"nome": "CMP.151.0.3","descricao": "Teoria dos Grafos","professor":"Aurelio"}
+    ]
+}

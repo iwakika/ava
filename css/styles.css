@@ -2,6 +2,33 @@
     padding: 0.01em 16px;
 }
 
+.cont {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #FFF;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
 .large {
     font-size: 25px;
 }
@@ -30,6 +57,10 @@
 
 .right {
     float: right;
+}
+
+.left {
+    float: left;
 }
 
 .btn {
@@ -98,9 +129,14 @@
     position: fixed;
     height: 100%;
     width: 100%;
-    /*Eliminar as linha de cima*/
-    background-color: #999999;
+    background-color: #ecf0f5;
     margin: 0px 300px;
+    overflow: scroll;
+}
+
+.main-center {
+    margin: 17px;
+    width: 77%;
 }
 
 .noticias {
@@ -139,6 +175,59 @@
         display: none!important
     }
 }*/
+
+.control-label {
+    padding-top: 7px;
+    margin-bottom: 0;
+    text-align: right;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.box-header {
+    color: #444;
+    display: block;
+    padding: 10px;
+    position: relative;
+}
+
+.box-header.with-border {
+    border-bottom: 1px solid #f4f4f4;
+}
+
+.box {
+    position: relative;
+    border-radius: 3px;
+    background: #ffffff;
+    border-top: 3px solid #d2d6de;
+    margin-bottom: 20px;
+    width: 100%;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.box.box-info {
+    border-top-color: #00c0ef;
+}
+
+.box-body {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    padding: 10px;
+}
+
+.box-footer {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-top: 1px solid #f4f4f4;
+    padding: 10px;
+    background-color: #fff;
+}
 
 iframe {
     position: absolute;
