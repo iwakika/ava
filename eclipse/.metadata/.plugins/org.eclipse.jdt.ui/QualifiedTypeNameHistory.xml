@@ -18,4 +18,6 @@
 <fullyQualifiedTypeName name="javax.ws.rs.PathParam"/>
 <fullyQualifiedTypeName name="javax.ws.rs.PUT"/>
 <fullyQualifiedTypeName name="javax.ws.rs.Consumes"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="javax.xml.bind.annotation.XmlRootElement"/>
 </qualifiedTypeNameHistroy>
